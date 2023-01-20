@@ -1,6 +1,5 @@
 /*CSS Reset*/
-
-  @import url("https://font.googleapis.com/css27family=Poppins&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
 
   * {
 
@@ -13,9 +12,7 @@
   }
 
   body {
-
-    font-family: "Poppins";
-
+    font-family: 'Comfortaa', cursive;
   }
 
   a {
