@@ -10,6 +10,6 @@
       else {
         pass_field.type = "password";
         showBtn.textContent = "SHOW";
-        showBtn.style.color = "#";
+        showBtn.style.color = "#222";
       }
     });
