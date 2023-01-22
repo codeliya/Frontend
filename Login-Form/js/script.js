@@ -5,11 +5,11 @@
       if(pass_field.type === "password") {
         pass_field.type = "text";
         showBtn.textContent = "HIDE";
-        showBtn.style.color = "#3498db";
+        showBtn.style.color = "#273443";
       }
       else {
         pass_field.type = "password";
         showBtn.textContent = "SHOW";
-        showBtn.style.color = "#222";
+        showBtn.style.color = "#";
       }
     });
