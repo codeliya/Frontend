@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Horizontal Card</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a2668;
+}
+.wrapper .outer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .card{
+  background: #ffeba7;
+  width: 430px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 5px 20px 24px 5px #00000073;
+  animation: animate 15s linear infinite;
+  border: 1px solid #5bd370;
+  animation-delay: calc(3s * var(--dealy));
+}
+.outer:hover .card{
+  animation-play-state: paused;
+}
+.wrapper .card:last-child{
+  animation-delay: calc(-3s * var(--dealy));
+}
+@keyframes animate{
+  0%{
+    opacity: 0;
+    transform: translateX(100%) scale(0.5);
+  }
+  5%, 20%{
+    opacity: 0.2;
+    transform: translateX(100%) scale(0.7);
+  }
+  25%, 40%{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0%) scale(1);
+  }
+  45%, 60%{
+    opacity: 0.2;
+    transform: translateX(-100%) scale(0.7);
+  }
+  65%, 100%{
+    opacity: 0;
+    transform: translateX(-100%) scale(0.5);
+  }
+}
+
+.card .content{display: flex; align-items: center;}
+.wrapper .card .img{
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  left: -35px;
+  background: white;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+}
+.card .img img{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.card .details {margin-left: 40px;}
+.deatils span{
+  color: #1a2668;
+  font-weight: 600;
+  font-size: 18px;
+}
+.details p{color: #1a2668;}
+.card a{
+  text-decoration: none;
+  padding: 7px 18px;
+  border-radius: 25px;
+  color: white;
+  background: #1a2668;
+  transition: all 0.3s ease;
+}
+.card a:hover{transform: scale(0.94);}
+</style>
+<body>
+
+<div class="wrapper">
+	<div class="outer">
+		<div class="card" style="--dealy:-1;">
+			<div class="content">
+				<div class="img"><img src="https://i.stack.imgur.com/fewm7.jpg"></div>
+				<div class="details">
+					<span class="name">Codeliya</span>
+					<p>Beginner Friendly</p>
+				</div>
+			</div>
+			<a href="#">Like</a>
+		</div>
+
+		<div class="card" style="--dealy:0;">
+			<div class="content">
+				<div class="img"><img src="https://i.stack.imgur.com/YAeRE.png"></div>
+				<div class="details">
+					<span class="name">Shabbir Ali</span>
+					<p>Anime</p>
+				</div>
+			</div>
+			<a href="#">Like</a>
+		</div>
+
+		<div class="card" style="--dealy:1;">
+			<div class="content">
+				<div class="img"><img src="https://i.stack.imgur.com/4HmBU.jpg"></div>
+				<div class="details">
+					<span class="name">Shabbir Ali</span>
+					<p>Freelancer</p>
+				</div>
+			</div>
+			<a href="#">Like</a>
+		</div>
+
+		<div class="card" style="--dealy:2;">
+			<div class="content">
+				<div class="img"><img src="https://i.stack.imgur.com/2PYEp.png"></div>
+				<div class="details">
+					<span class="name">Instagram</span>
+					<p>Social Media</p>
+				</div>
+			</div>
+			<a href="#">Like</a>
+		</div>
+
+		<div class="card" style="--dealy:2;">
+			<div class="content">
+				<div class="img"><img src="https://i.stack.imgur.com/MxNPi.png"></div>
+				<div class="details">
+					<span class="name">Notification</span>
+					<p>Service</p>
+				</div>
+			</div>
+			<a href="#">Like</a>
+		</div>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
